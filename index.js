@@ -10,6 +10,7 @@ const server = new GraphQLServer({
     language: String
     medium_cover_image: String
     genres: [String]
+    
   }
   
   type Query {
