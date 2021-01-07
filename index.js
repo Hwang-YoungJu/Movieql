@@ -22,7 +22,11 @@ const server = new GraphQLServer({
   resolvers
 });
 
-server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+const PORT = process.env.PORT || 4000;
+server.start(() => console.log(`Server running on Port : ${PORT}`));
+/*
+server.listen({ PORT: process.env.PORT || 4000 }).then(({ url }) => {
   console.log(`Server ready at ${url}`);
-  console.log(`Server running on port : ${port}`);
+  console.log(`Server running on port : ${PORT}`);
 });
+*/
